@@ -10,5 +10,13 @@ echo "Age du joueur 1 : ". $age;
 echo "<br />";
 $age += 1;
 echo "Age du joueur 1 : ". $age;
+echo "<br />";
+if($estUnHomme === true) {
+
+    echo "C'est un homme";
+} else {
+    echo "C'est une femme";
+} 
+
 
 ?>
