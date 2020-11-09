@@ -1,5 +1,12 @@
 <?php
 
+/*Variabile costante che per 
+covenzione si scrive in maiuscolo:
+- Nel primo argomento metto il nome della variabile in maiuscolo
+- Nel secondo argomento il contenuto della variabile
+*/
+define("SEPARATEUR", "+");
+
 
 $nomJoueur1 = "Guy"; //Variabile di tipo stringa
 $ageJoueur1 = "33"; //Variabile di tipo intero
@@ -10,14 +17,19 @@ $nomJoueur2 = "Leila"; //Variabile di tipo stringa
 $ageJoueur2 = "32"; //Variabile di tipo intero
 $estUnHommeJoueur2 = false; //Variabile di tipo booleano
 
+$separateur = "-";
+
+
+//Instruction
 afficheJoueur($nomJoueur1, $ageJoueur1, $estUnHommeJoueur1 );
-// echo "<br>";
-sauteLigne();
+sauteLigne(SEPARATEUR);
 afficheJoueur($nomJoueur2, $ageJoueur2, $estUnHommeJoueur2 );
-sauteLigne();
+sauteLigne(SEPARATEUR);
 ageSuperieur($ageJoueur1, $ageJoueur2);
+sauteLigne(SEPARATEUR);
+$differenceAge = differenceAge($ageJoueur1, $ageJoueur2);
 
-
+echo "La difference d'age est de: ".$differenceAge;
 
 
 
@@ -54,12 +66,27 @@ function afficheJoueur ($nom, $age, $homme) {
  }
 
 
- function sauteLigne () {
-     echo "<br>";
+ function sauteLigne ($separateur) {
 
-     echo "----------------------------------";
-
-     echo "<br>";
+    echo "<br>";
+    for ($i = 0; $i < 50; $i++) {
+     echo $separateur ;
+    }
+    echo "<br>";
  }
+
+
+ function differenceAge($ageJoueur1, $ageJoueur2) {
+
+    $resultat = $ageJoueur1 - $ageJoueur2;
+
+    if($resultat < 0) {
+        $resultat = -$resultat;
+    }
+ 
+    return $resultat;
+
+ }
+
 
 ?>
