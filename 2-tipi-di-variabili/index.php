@@ -1,7 +1,7 @@
 <?php 
 
 $nomDuJoueur1 = "Guy"; //Variabile di tipo stringa
-$age = "33"; //Variabile di tipo intero
+$age = 33; //Variabile di tipo intero
 $estUnHomme = true; //Variabile di tipo booleano
 
 echo "Nom du joueur 1 : ". $nomDuJoueur1;

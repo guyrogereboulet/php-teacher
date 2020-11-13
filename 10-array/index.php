@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 /*Variabile costante che per 
 covenzione si scrive in maiuscolo:
@@ -7,14 +7,17 @@ covenzione si scrive in maiuscolo:
 */
 define("SEPARATEUR", "+");
 
+$jouer1 = ["Guy", 18, true ];
+$jouer2 = ["Leila", 15, false ];
+
 
 $nomJoueur1 = "Guy"; //Variabile di tipo stringa
-$ageJoueur1 = 33; //Variabile di tipo intero
+$ageJoueur1 = 18; //Variabile di tipo intero
 $estUnHommeJoueur1 = true; //Variabile di tipo booleano
 
 
 $nomJoueur2 = "Leila"; //Variabile di tipo stringa
-$ageJoueur2 = 32; //Variabile di tipo intero
+$ageJoueur2 = 15; //Variabile di tipo intero
 $estUnHommeJoueur2 = false; //Variabile di tipo booleano
 
 $separateur = "-";
@@ -28,8 +31,11 @@ sauteLigne(SEPARATEUR);
 ageSuperieur($ageJoueur1, $ageJoueur2);
 sauteLigne(SEPARATEUR);
 $differenceAge = differenceAge($ageJoueur1, $ageJoueur2);
-
 echo "La difference d'age est de: ".$differenceAge;
+sauteLigne(SEPARATEUR);
+afficherAge($ageJoueur1);
+sauteLigne(SEPARATEUR);
+afficherAge($ageJoueur2);
 
 
 
@@ -69,10 +75,30 @@ function afficheJoueur ($nom, $age, $homme) {
  function sauteLigne ($separateur) {
 
     echo "<br>";
-    for ($i = 0; $i < 50; $i++) {
-     echo $separateur ;
+    // for ($i = 0; $i < 50; $i++) {
+    //  echo $separateur ;
+    // }
+
+
+    //Cicle While
+    $i = 0;
+
+    while( $i < 50) {
+        echo $separateur ;
+        $i++;
     }
     echo "<br>";
+
+    //Cicle Do While
+    // $i = 0;
+    // do{
+    //     $i++;
+    //     echo $separateur;
+
+    // } while( $i < 50);
+    // echo "<br>";
+
+    
  }
 
 
@@ -89,4 +115,39 @@ function afficheJoueur ($nom, $age, $homme) {
  }
 
 
-?>
+ function afficherAge($age) {
+
+    // if ($age > 18) {
+    //     echo $age;
+    //     echo "<br />";
+    //     echo "il est majeur";
+    // }
+    // else if ($age === 18) {
+    //     echo $age;
+    //     echo "<br />";
+    //     echo "il est juste majeur";
+    // }
+    // else {
+    //     echo $age;
+    //     echo "<br />";
+    //     echo "il est mineur";
+
+    // }
+
+
+    switch($age) {
+
+        case 18: echo "il a 18 ans";
+         break;
+        case 19: echo "il a 19 ans";
+         break;
+        case 20: echo "il a 20 ans";
+         break;
+        case 21: echo "il a 21 ans";
+         break;
+        default: echo "je ne sais pas du tout";
+    }
+
+ };
+
+?> 

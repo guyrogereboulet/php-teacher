@@ -2,7 +2,7 @@
 
 
 $nomJoueur1 = "Guy"; //Variabile di tipo stringa
-$ageJoueur1 = "33"; //Variabile di tipo intero
+$ageJoueur1 = 33; //Variabile di tipo intero
 $estUnHommeJoueur1 = true; //Variabile di tipo booleano
 
 afficheCode($nomJoueur1, $ageJoueur1, $estUnHommeJoueur1 );

@@ -7,14 +7,13 @@ covenzione si scrive in maiuscolo:
 */
 define("SEPARATEUR", "+");
 
-
 $nomJoueur1 = "Guy"; //Variabile di tipo stringa
-$ageJoueur1 = "18"; //Variabile di tipo intero
+$ageJoueur1 = 18; //Variabile di tipo intero
 $estUnHommeJoueur1 = true; //Variabile di tipo booleano
 
 
 $nomJoueur2 = "Leila"; //Variabile di tipo stringa
-$ageJoueur2 = "15"; //Variabile di tipo intero
+$ageJoueur2 = 15; //Variabile di tipo intero
 $estUnHommeJoueur2 = false; //Variabile di tipo booleano
 
 $separateur = "-";
