@@ -8,7 +8,7 @@ covenzione si scrive in maiuscolo:
 define("SEPARATEUR", "+");
 
 $jouer1 = ["Guy", 18, true ];
-$jouer2 = ["Leila", 15, false ];
+$jouer2 = ["Leila", 15, false];
 
 
 $nomJoueur1 = "Guy"; //Variabile di tipo stringa
@@ -24,18 +24,18 @@ $separateur = "-";
 
 
 //Instruction
-afficheJoueur($nomJoueur1, $ageJoueur1, $estUnHommeJoueur1 );
+afficheJoueur($jouer1<[0], $jouer1[1], $jouer1[2]);
 sauteLigne(SEPARATEUR);
-afficheJoueur($nomJoueur2, $ageJoueur2, $estUnHommeJoueur2 );
+afficheJoueur($jouer2<[0], $jouer2[1], $jouer2[2]);
 sauteLigne(SEPARATEUR);
-ageSuperieur($ageJoueur1, $ageJoueur2);
+ageSuperieur($jouer1[1], $jouer2[1]);
 sauteLigne(SEPARATEUR);
-$differenceAge = differenceAge($ageJoueur1, $ageJoueur2);
+$differenceAge = differenceAge($jouer1[1], $jouer2[1]);
 echo "La difference d'age est de: ".$differenceAge;
 sauteLigne(SEPARATEUR);
-afficherAge($ageJoueur1);
+afficherAge($jouer1[1]);
 sauteLigne(SEPARATEUR);
-afficherAge($ageJoueur2);
+afficherAge($jouer2[1]);
 
 
 
