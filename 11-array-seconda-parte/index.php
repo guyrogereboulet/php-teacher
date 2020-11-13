@@ -7,12 +7,32 @@ covenzione si scrive in maiuscolo:
 */
 define("SEPARATEUR", "+");
 
-$jouer1 = ["Guy", 18, true ];
-$jouer2 = ["Leila", 15, false];
+$jouer1 = [
+
+    "nom" => "Guy", 
+    "age" => 18, 
+    "estUnHomme" => true 
+];
+
+$jouer2 = [
+    
+    "nom" => "Leila", 
+    "age" => 15, 
+    "estUnHomme" => false 
+];
+
+$jouer3 = [
+    
+    "nom" => ["toto", "toti"], 
+    "age" => 22, 
+    "estUnHomme" => true 
+];
+
+ 
 
 
 //Ci permette di stampare a video l'array
-print_r($jouer1);
+// print_r($jouer1);
  
 
 $separateur = "-";
@@ -20,14 +40,18 @@ $separateur = "-";
 
 //Instruction
 afficherTableau($jouer1);
-// afficheJoueur($jouer1[0], $jouer1[1], $jouer1[2]);
 sauteLigne(SEPARATEUR);
-// afficheJoueur($jouer2[0], $jouer2[1], $jouer2[2]);
 afficherTableau($jouer2);
 sauteLigne(SEPARATEUR);
-ageSuperieur($jouer1[1], $jouer2[1]);
+afficherTableau($jouer3);
 sauteLigne(SEPARATEUR);
-$differenceAge = differenceAge($jouer1[1], $jouer2[1 ]);
+afficheJoueur($jouer1["nom"], $jouer1["age"], $jouer1["estUnHomme"]);
+sauteLigne(SEPARATEUR);
+afficheJoueur($jouer2["nom"], $jouer2["age"], $jouer2["estUnHomme"]);
+sauteLigne(SEPARATEUR);
+ageSuperieur($jouer1["age"], $jouer2["age"]);
+sauteLigne(SEPARATEUR);
+$differenceAge = differenceAge($jouer1["age"], $jouer2["age"]);
 echo "La difference d'age est de: ".$differenceAge;
 sauteLigne(SEPARATEUR);
 afficherAge($jouer1[1]);
@@ -157,10 +181,26 @@ function afficheJoueur ($nom, $age, $homme) {
     //     sauteLigne(SEPARATEUR);
     // }
 
-    //Usando il foreach abbiamo come "key" l'indice dell'array mentre cone $value abbiamo il contenuto dell'array
+    //Usando il foreach abbiamo come "key" l'indice dell'array mentre cone $value abbiamo il contenuto
     foreach ($tab as $key => $value) {
-        echo $key.":" .$value;
-        echo "<br />";
+
+        //Per vevere il primo valore del terzo giocatore che è un array dovviamo fare un test:
+        
+        if(!is_array($value)){
+            //Se il valore non è un arry stampo:
+
+            echo $key.":" .$value ."<br />";
+          // Altrimenti faccio un foreach sull'array
+        } else {
+
+            // foreach($value as $subvalue) {
+            //     echo $subvalue."<br />";
+            // }
+
+            // Altrimenti richiamo la stessa funzione:
+            afficherTableau($value);
+        }
+        
     }
  }
 
