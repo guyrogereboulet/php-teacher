@@ -187,7 +187,7 @@ function afficheJoueur ($nom, $age, $homme) {
         //Per vevere il primo valore del terzo giocatore che è un array dovviamo fare un test:
         
         if(!is_array($value)){
-            //Se il valore non è un arry stampo:
+            //Se il valore non è un array stampo:
 
             echo $key.":" .$value ."<br />";
           // Altrimenti faccio un foreach sull'array
