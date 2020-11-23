@@ -26,6 +26,8 @@ function multiplication($number1, $number2) {
 
     $result = $number1 * $number2;
 
+
+    //Print result
     echo $number1."*".$number2." = ".$result."<br>";
     
 
