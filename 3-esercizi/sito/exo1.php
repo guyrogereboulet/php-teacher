@@ -39,5 +39,5 @@ function multiplication($number1, $number2) {
 
 
 <?php 
- include("../commons/footer.php");
+ include("commons/footer.php");
 ?>
