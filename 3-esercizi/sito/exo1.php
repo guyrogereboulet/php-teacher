@@ -36,7 +36,7 @@ include("commons/menu.php");
 
 define("TABLE", 4);
 
-for ($i = 0; $i <= 10; $i++) {
+for ($i = 1; $i <= 10; $i++) {
 
     echo $i ." * ". TABLE." = ".$i * TABLE."<br>";
 }
