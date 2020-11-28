@@ -29,6 +29,8 @@ $hauteur = $_POST["hauteur"];
         }
 
         for ($i=0; $i < $hauteur-1; $i++) { 
+
+            //Con substr riduco la lunghezza della stringa
             $txt = substr($txt,0,strlen($txt)-2);
             echo $txt."<br>";
         }
