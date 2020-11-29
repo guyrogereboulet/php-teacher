@@ -23,7 +23,8 @@ $hauteur = $_POST["hauteur"];
 
     if (isset($hauteur) && $hauteur > 0) {
 
-        for ($i=0; $i < $hauteur; $i++) { 
+        for ($i=0; $i < $hauteur; $i++) {
+            //Ad ogni giro aggiungo la stinga $txt 
             $txt .= "**";
             echo $txt."<br>";
         }
