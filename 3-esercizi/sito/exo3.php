@@ -39,7 +39,7 @@ $hauteur = $_POST["hauteur"];
 
     
 
-   
+      //Altrimenti
     } else {
         echo "<h2>Saisir une valeur svp</h2>";
     }

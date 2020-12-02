@@ -15,7 +15,7 @@
             <legend>Information</legend>
             <label for="nom">Nom :</label>
             <input type="text" name="nom" id="nom" required>
-            <label for="nom">Age :</label>
+            <label for="age">Age :</label>
             <input type="number" name="age" id="age" required>
             <input type="submit" value="envoyer">
         </fieldset>
