@@ -8,6 +8,7 @@ include("commons/menu.php");
 
 <label for="hauteur">Hauteur de la pyramyde:</label>
 <input type="number" id="hauteur" name="hauteur">
+
 <button type="submit">Valider</button>
 </form>
 
