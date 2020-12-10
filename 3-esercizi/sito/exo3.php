@@ -6,10 +6,14 @@ include("commons/menu.php");
 
 <form action="#" method="POST">
 
-<label for="hauteur">Hauteur de la pyramyde:</label>
-<input type="number" id="hauteur" name="hauteur">
+<label for="hauteur">Rayon d'un code:</label>
+    <input type="number" id="hauteur" name="hauteur">
+<label for="perimetre">Perimètre</label>
+    <input type="checkbox"  name="perimetre">
+<label for="aire">Aire</label>
+    <input type="checkbox"  name="aire">
 
-<button type="submit">Valider</button>
+<button type="submit">Envoyer</button>
 </form>
 
 
