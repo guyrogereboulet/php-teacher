@@ -2,16 +2,16 @@
 include("commons/head.php");
 include("commons/menu.php");
 ?>
-<h1>Affichage d'une pyramide</h1>
+<h1>Cercle - Périmètre et Aire</h1>
 
 <form action="#" method="POST">
 
-<label for="hauteur">Rayon d'un code:</label>
-    <input type="number" id="hauteur" name="hauteur">
-<label for="perimetre">Perimètre</label>
-    <input type="checkbox"  name="perimetre">
-<label for="aire">Aire</label>
-    <input type="checkbox"  name="aire">
+<label for="rayon">Rayon:</label>
+    <input type="number" id="rayon" name="rayon"><br>
+<label for="perimetre">Périmètre:</label>
+    <input type="checkbox"  name="perimetre" id="perimetre" checked ><br>
+<label for="aire">Aire:</label>
+    <input type="checkbox"  name="aire" id="aire" checked><br>
 
 <button type="submit">Envoyer</button>
 </form>
@@ -22,27 +22,29 @@ include("commons/menu.php");
 
 <?php 
 
-$hauteur = $_POST["hauteur"];
+$rayon = $_POST["rayon"];
+$perimetre = $_POST["perimetre"];
+$aire = $_POST["aire"];
 
 
 
-    if (isset($hauteur) && $hauteur > 0) {
+    if (isset($rayon) && $rayon > 0) {
 
-        for ($i=0; $i < $hauteur; $i++) {
-            //Ad ogni giro aggiungo la stinga $txt 
-            $txt .= "**";
-            echo $txt."<br>";
+        echo "<h2> Résultats </h2>";
+
+        echo "<p>";
+
+        if (isset($perimetre)) {
+             echo "Le perimetre d'un cercle de rayon : <b>". $rayon . "</b> est: <b>".($rayon*2*pi()) . "</b></br>";
+        }
+        if (isset($aire)) {
+             echo "L'aire d'un cercle de rayon : <b>". $rayon . "</b> est: <b>".($rayon*$rayon*pi()) . "</b></br>";
         }
 
-        for ($i=0; $i < $hauteur-1; $i++) { 
-
-            //Con substr riduco la lunghezza della stringa
-            $txt = substr($txt,0,strlen($txt)-2);
-            echo $txt."<br>";
-        }
+        echo "</p>";
 
 
-    
+        
 
       //Altrimenti
     } else {
