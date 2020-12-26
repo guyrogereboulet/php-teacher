@@ -4,7 +4,7 @@
 ?>
 
 
-<h1>Calculer une moyenne </h1>
+<h1>Selection du personnage </h1>
 <form action="#" method="GET">
     <label for="nb">Combien de notes: </label>
     <input type="number" name="nb" id= "nb">
