@@ -6,8 +6,11 @@
 
 <h1>Selection du personnage </h1>
 <form action="#" method="GET">
-    <label for="nb">Combien de notes: </label>
-    <input type="number" name="nb" id= "nb">
+
+<select name="personnage" id="personnage">
+    <option value="homme">Homme</option>
+    <option value="femme">Femme</option>
+</select>
     <input type="submit" value="valider">
 </form>
 
