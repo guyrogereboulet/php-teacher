@@ -31,11 +31,14 @@
 
 if(isset($_POST["valider"])){
 
-            if(isset($_POST["personnage"])){
+            if(isset($_POST["personnage"]) && $_POST["personnage"] === "homme"){
 
-                echo "Ciao";
+                echo "Homme";
 
-        }
+            } else {
+                echo "Femme";
+                
+            }
 
 }
 
