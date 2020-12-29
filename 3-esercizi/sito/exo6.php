@@ -15,18 +15,6 @@
 </form>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 <?php 
 
 if(isset($_POST["valider"])){
