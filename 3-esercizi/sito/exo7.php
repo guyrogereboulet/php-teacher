@@ -19,14 +19,34 @@
 
 <?php 
 
-$array = [2,7,9,10,11,13]
+    $array = [2,6,8,10,12,14];
+
+    echo "<h2>Résultat: </h2>";
+    if(checkTableau($array)) {
+        echo "Le tableau ne contient que des valeurs paires";
+    } else{
+        echo "Le tableau contient des valeus impaires";
+    }
 
 
 
+    function checkTableau($array) {
+
+        for ($i=0; $i <= count($array)-1; $i++) { 
+            if ($array[$i] % 2 !== 0) {
+
+                return false;
+
+                
+
+            }
+        }
+        return true;
+
+        
+    }
 
 ?>
-
-
 
 <?php 
  include("commons/footer.php");
