@@ -10,6 +10,7 @@
         <li><a href="exo6.php">Exo6</a></li>
         <li><a href="exo7.php">Exo7</a></li>
         <li><a href="exo8.php">Exo8</a></li>
+        <li><a href="exo9.php">Exo9</a></li>
     </ul>
 </nav>
 
