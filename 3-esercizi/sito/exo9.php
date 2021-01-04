@@ -2,9 +2,24 @@
     include("commons/head.php");
     include("commons/menu.php");
 
-    $p1 = ["Luke", 27, true, 5];
-    $p2 = ["Guy", 33, true, 7];
-    $p3 = ["Rose", 29, false, 6];
+    $p1 = [
+     "Nom" =>  "Luke", 
+     "Age" => 27, 
+     "Sexe" => "Homme",
+     "Force" => 5
+    ];
+    $p2 = [
+     "Nom" =>  "Guy", 
+     "Age" => 33, 
+     "Sexe" => "Homme",
+     "Force" => 7
+    ];
+    $p3 = [
+     "Nom" =>  "Rose", 
+     "Age" => 29, 
+     "Sexe" => "Femme",
+     "Force" => 6
+    ];
    
 ?>
 
@@ -44,18 +59,24 @@
 
     function afficherPerso ($tableau) {
 
-        echo "nom :". $tableau[0] ."<br>";
-        echo "age :". $tableau[1] ."<br>";
+        foreach($tableau as $index => $value) {
 
-        if($tableau[2]) {
+            echo "<b>".$index."</b>: ".  $value . "<br>";
 
-            echo "sexe : homme <br>";
-
-        } else {
-            echo "sexe : femme <br>";
         }
+
+        // echo "nom :". $tableau[0] ."<br>";
+        // echo "age :". $tableau[1] ."<br>";
+
+        // if($tableau[2]) {
+
+        //     echo "sexe : homme <br>";
+
+        // } else {
+        //     echo "sexe : femme <br>";
+        // }
         
-        echo "force:". $tableau[3] ."<br>";
+        // echo "force:". $tableau[3] ."<br>";
         
 
         
