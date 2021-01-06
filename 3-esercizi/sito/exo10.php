@@ -26,18 +26,8 @@
 
 
 
-<h1>Selection du personnage </h1>
-<form action="#" method="POST">
+<h1>Personnage </h1>
 
-<label for="personnage">Personnage: </label>
-    <!-- Con onChange = "submit" possiamo omettere input type= "submit"  -->
-    <select name="personnage" id="personnage" onChange = "submit()">
-        <option value="p1" <?php if(isset($_POST["personnage"]) && $_POST["personnage"] === "p1") echo "selected" ?> >Luke</option>
-        <option value="p2" <?php if(isset($_POST["personnage"]) && $_POST["personnage"] === "p2") echo "selected" ?> >Guy</option>
-        <option value="p3" <?php if(isset($_POST["personnage"]) && $_POST["personnage"] === "p3") echo "selected" ?> >Rose</option>
-    </select>
-    <!-- <input type="submit" value="valider"> -->
-</form>
 
 
 
