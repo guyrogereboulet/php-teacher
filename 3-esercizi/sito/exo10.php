@@ -5,21 +5,24 @@
     $p1 = [
      "Nom" =>  "Luke", 
      "Age" => 27, 
-     "Sexe" => "Homme",
+     "Sexe" => true,
      "Force" => 5
     ];
     $p2 = [
      "Nom" =>  "Guy", 
      "Age" => 33, 
-     "Sexe" => "Homme",
+     "Sexe" => true,
      "Force" => 7
     ];
     $p3 = [
      "Nom" =>  "Rose", 
      "Age" => 29, 
-     "Sexe" => "Femme",
+     "Sexe" => false,
      "Force" => 6
     ];
+
+
+    $persos = [$p1, $p2, $p3];
    
 ?>
 
@@ -34,24 +37,56 @@
 
 <?php 
 
+ foreach($persos as $perso) {
+
+    afficherPerso($perso);
+
+    echo "<br>";
+
+ }
 
 
-    if(!isset($_POST["personnage"]) || $_POST["personnage"] === "p1") {
-        afficherPerso($p1);
-    } 
-    else if($_POST["personnage"] === "p2") {
-        afficherPerso($p2);
-    }
-    else if($_POST["personnage"] === "p3") {
-        afficherPerso($p3);
-    }
+
+
+
+    // if(!isset($_POST["personnage"]) || $_POST["personnage"] === "p1") {
+    //     afficherPerso($p1);
+    // } 
+    // else if($_POST["personnage"] === "p2") {
+    //     afficherPerso($p2);
+    // }
+    // else if($_POST["personnage"] === "p3") {
+    //     afficherPerso($p3);
+    // }
 
 
     function afficherPerso ($tableau) {
 
         foreach($tableau as $index => $value) {
 
-            echo "<b>".$index."</b>: ".  $value . "<br>";
+            if ($index !== "Sexe") {
+
+                echo "<b>".$index."</b>: ".  $value . "<br>";
+
+            }
+
+            
+
+            if ($index === "Sexe") {
+
+                echo "<b>Sexe </b>";
+
+                if($value) {
+                    echo "Homme <br>";
+
+                } else {
+                    echo "Femme <br>";
+
+                }
+
+
+
+            }
 
         }
 
