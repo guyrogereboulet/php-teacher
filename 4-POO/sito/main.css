@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.backgroundColorRed {
+  background-color: red;
+
+  }
+
+.backgroundColorGreen {
+      background-color: green;
+      padding: 10px;
+      border: 2px solid black;
+      text-align: center;
+      margin-top: 10px;
+  }
+
+nav {
+  background-color: blue;
+  padding: 30px;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  
+}
+ nav ul li {
+   list-style-type: none;
+   padding: 10px;
+ }
+
+ nav ul li a {
+   color: white;
+   text-decoration: none;
+ }
+
+ nav ul li a:hover{
+   text-decoration: none;
+   color: red;
+ }
+
+ form {
+   padding: 10px;
+   margin: 5px;
+ }
+
+ fieldset {
+
+  padding: 5px;
+  margin: 5px;
+
+ }
+
