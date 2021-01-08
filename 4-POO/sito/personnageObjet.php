@@ -1,10 +1,10 @@
 <?php
 
 class Personnage {
-    public $nom;
-    public $age;
-    public $sexe;
-    public $force;
+    public $nom = "Guy";
+    public $age = 33;
+    public $sexe = true;
+    public $force = 5;
 }
 
 
@@ -20,14 +20,17 @@ class Personnage {
 
 <?php 
  $p1 = new Personnage();
-  echo "Nom : ".$p1->nom = "Guy";
-  echo '<br>';
-  echo "Age : ".$p1->age = 33;
-  echo '<br>';
-  echo "Sexe : ".$p1->sexe = true;
-  echo '<br>';
-  echo "force : ".$p1->force = 5;
+  echo "Nom : ".$p1->nom ."<br>";
+  echo "Age : ".$p1->age."<br>";
+//   echo "Sexe : ".$p1->sexe."<br>";
+  if ($p1->sexe){
+    echo "Sexe: Homme<br>";
+}
+  echo "Force : ".$p1->force."<br>";
+
+ $p2 = new Personnage();
 ?>
+
 
 
 <?php 
